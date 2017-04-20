@@ -7,10 +7,12 @@
     <artifactId>zxin-admin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>zxin-chat</artifactId>
-  <packaging>war</packaging>
-  <name>zxin-chat Maven Webapp</name>
+  <artifactId>zxin-util</artifactId>
+  <name>zxin-util</name>
   <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -19,7 +21,4 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <build>
-    <finalName>zxin-chat</finalName>
-  </build>
 </project>

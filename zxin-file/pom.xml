@@ -7,9 +7,7 @@
     <artifactId>zxin-admin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.zisezhixin</groupId>
   <artifactId>zxin-file</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>zxin-file Maven Webapp</name>
   <url>http://maven.apache.org</url>

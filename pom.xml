@@ -309,9 +309,13 @@
 	</build>
 	<modules>
 		<module>zxin-test</module>
-
 		<module>zxin-tag</module>
 		<module>zxin-file</module>
 		<module>zxin-chat</module>
+		<module>zxin-util</module>
+		<module>zxin-dao</module>
+		<module>zxin-service</module>
+		<module>zxin-model</module>
+		<module>zxin-test-controller</module>
 	</modules>
 </project>

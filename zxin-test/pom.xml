@@ -8,7 +8,7 @@
 		<artifactId>zxin-admin</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>zxin-test</artifactId>
+	<artifactId>zxin-test-view</artifactId>
 	<packaging>war</packaging>
 	<name>zxin-test Maven Webapp</name>
 	<url>http://maven.apache.org</url>
