@@ -56,16 +56,16 @@
 		<!-- mybatis配置文件路径  -->
 		<property name="configLocation" value="classpath:mybatis/mybatis-config.xml" />
 		<!-- 实体类映射文件路径  -->
-		<property name="mapperLocations" value="classpath:mapper/*/*.xml" />
-		<property name="plugins">
+		<!-- <property name="mapperLocations" value="classpath:mapper/*/*.xml" /> -->
+		<!-- <property name="plugins">
 			<list>
 				<bean class="com.xk.model.common.interceptor.PaginationInterceptor">
 					<property name="dialect">
-						<bean class="com.xk.model.common.dialect.MySql5Dialect"></bean>
+						<bean class="com.zisezhixin.dialect.MySql5Dialect"></bean>
 					</property>
 				</bean>
 			</list>
-		</property>
+		</property> -->
 	</bean>
 	
 	<!-- 配置sqlsession 产生这个实例就是通过 sqlsessionTemplate来实现的 -->
@@ -73,7 +73,7 @@
 	
 	<!-- 根据MapperDao接口批量生成实现对象 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.xk.dao" />
+		<property name="basePackage" value="com.zisezhixin" />
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 	</bean>
 

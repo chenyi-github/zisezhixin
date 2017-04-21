@@ -13,7 +13,7 @@
 	
 	<!-- 加入Aspectj配置 -->  
     <aop:aspectj-autoproxy/>  
-    <bean id="logAspect" class="com.xk.intelligentclaim.annotation.LogAspect" />
+    <!-- <bean id="logAspect" class="com.xk.intelligentclaim.annotation.LogAspect" /> -->
 	
 	<!-- 注解驱动 -->
 	<mvc:annotation-driven content-negotiation-manager="contentNegotiationManager" />   
@@ -35,7 +35,7 @@
 	<bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"></bean> 
 	
 	<!-- 扫描 -->
-	<context:component-scan base-package="com.xk">
+	<context:component-scan base-package="com.zisezhixin">
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/> 
 	</context:component-scan>
 	
