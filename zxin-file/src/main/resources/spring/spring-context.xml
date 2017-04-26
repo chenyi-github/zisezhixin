@@ -14,7 +14,7 @@
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan>
   
-    <import resource="classpath:db/data-source.xml" />
+<!--     <import resource="classpath:db/data-source.xml" /> -->
   
     <bean class="com.zisezhixin.util.adapter.ConfigBeanAdapter">
         <property name="fileServerIp" value="${file.serverIp}"/>

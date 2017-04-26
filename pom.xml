@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.zisezhixin</groupId>
@@ -100,7 +99,7 @@
 			<version>${spring.version}</version>
 		</dependency>
 
-		<!-- jackson json解析支持 @ResponseBody用 -->
+		<!-- jackson json解析支持 @ResponseBody�?-->
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
@@ -203,7 +202,7 @@
 			<artifactId>log4j-core</artifactId>
 			<version>2.6.2</version>
 		</dependency>
-		<!-- 日志输入比较重要的jar包，会影响输出内容（sql） -->
+		<!-- 日志输入比较重要的jar包，会影响输出内容（sql�?-->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-slf4j-impl</artifactId>
@@ -216,7 +215,7 @@
 			<version>1.4</version>
 		</dependency>
 
-		<!-- 推送消息 -->
+		<!-- 推�?消息 -->
 		<dependency>
 			<groupId>cn.jpush.api</groupId>
 			<artifactId>jpush-client</artifactId>
@@ -230,7 +229,7 @@
 			<version>2.6.12</version>
 		</dependency>
 
-		<!-- 文件重命名 -->
+		<!-- 文件重命�?-->
 		<!-- <dependency> -->
 		<!-- <groupId>servlets.com</groupId> -->
 		<!-- <artifactId>cos</artifactId> -->
@@ -244,28 +243,28 @@
 			<version>2.2.1</version>
 		</dependency>
 
-		<!-- 文件流操作 -->
+		<!-- 文件流操�?-->
 		<dependency>
 			<groupId>com.thoughtworks.xstream</groupId>
 			<artifactId>xstream</artifactId>
 			<version>1.4.7</version>
 		</dependency>
 
-		<!-- jsp要用这个jar包 -->
+		<!-- jsp要用这个jar�?-->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>${servlet.version}</version>
 		</dependency>
 
-		<!-- jsp自定义标签 -->
+		<!-- jsp自定义标�?-->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
 
-		<!-- log4j可视化日志监控 -->
+		<!-- log4j可视化日志监�?-->
 		<dependency>
 			<groupId>com.xk</groupId>
 			<artifactId>log4jwebtracker</artifactId>
@@ -279,7 +278,7 @@
 			<version>1.25</version>
 		</dependency>
 
-		<!-- webUtils用 -->
+		<!-- webUtils�?-->
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
@@ -322,5 +321,6 @@
 		<module>zxin-service</module>
 		<module>zxin-model</module>
 		<module>zxin-test-controller</module>
-	</modules>
+    <module>zxin-calculator</module>
+  </modules>
 </project>

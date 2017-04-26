@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zisezhixin.dao.calculator.FactorMapper">
+  <resultMap id="BaseResultMap" type="com.zisezhixin.model.calculator.Factor">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="input_type" jdbcType="VARCHAR" property="factorType" />
+  </resultMap>
+ 
+  <select id="getFactorList" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    *
+    from t_adjustment_factor
+    where insurance_products_id = #{id}
+  </select>
+
+</mapper>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration 
+	PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+      "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<!-- 引入配置文件 -->
+	<properties resource="init.properties" />
+	<!-- 指定数据连接驱动jar地址 -->
+	<classPathEntry location="${classPath}" />
+	<!-- 一个数据库一个context -->
+	<context id="calculator" targetRuntime="MyBatis3"
+		defaultModelType="flat">
+
+		<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+		<commentGenerator>
+			<!-- 是否取消注释 -->
+			<property name="suppressAllComments" value="false" />
+			<!-- 是否生成注释代时间戳 -->
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+		<!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
+		<jdbcConnection driverClass="${jdbc_driver}"
+			connectionURL="${jdbc_url}" userId="${jdbc_user}" password="${jdbc_password}" />
+
+		<!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer true，把JDBC DECIMAL 和 
+			NUMERIC 类型解析为java.math.BigDecimal -->
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="true" />
+		</javaTypeResolver>
+
+		<!-- targetProject:自动生成代码的位置 -->
+
+		<javaModelGenerator targetPackage="com.zisezhixin.model.calculator"
+			targetProject="zxin-model">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+
+		<sqlMapGenerator targetPackage="mapper.calculator"
+			targetProject="zxin-dao/src/main/resources">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+
+
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.zisezhixin.dao.calculator" targetProject="${project.dao}">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		<!-- <table tableName="t_sys_user" domainObjectName="User" enableCountByExample="false" 
+			enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"/> -->
+		<!-- <table tableName="xx_plugin_config_attribute" domainObjectName="PluginConfigAttribute" 
+			enableCountByExample="false" enableSelectByExample="false" enableUpdateByExample="false" 
+			enableDeleteByExample="false" /> -->
+		<!-- <table tableName="t_sys_dept" domainObjectName="Dept" enableCountByExample="false" 
+			enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"/> -->
+		<table tableName="t_adjustment_coefficient" domainObjectName="Coefficient"
+			enableCountByExample="false" enableSelectByExample="false"
+			enableUpdateByExample="false" enableDeleteByExample="false" />
+	</context>
+
+</generatorConfiguration>

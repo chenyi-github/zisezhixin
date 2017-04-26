@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zisezhixin.dao.calculator.CoefficientMapper" >
+  <resultMap id="BaseResultMap" type="com.zisezhixin.model.calculator.Coefficient" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="adjustment_factor_id" property="adjustmentFactorId" jdbcType="BIGINT" />
+    <result column="factor_level" property="factorLevel" jdbcType="VARCHAR" />
+    <result column="factor1" property="factor1" jdbcType="VARCHAR" />
+    <result column="factor2" property="factor2" jdbcType="VARCHAR" />
+    <result column="factor3" property="factor3" jdbcType="VARCHAR" />
+    <result column="factor4" property="factor4" jdbcType="VARCHAR" />
+    <result column="factor5" property="factor5" jdbcType="VARCHAR" />
+    <result column="range_start" property="rangeStart" jdbcType="DECIMAL" />
+    <result column="range_end" property="rangeEnd" jdbcType="DECIMAL" />
+    <result column="coefficient" property="coefficient" jdbcType="DECIMAL" />
+    <result column="coefficient_min" property="coefficientMin" jdbcType="DECIMAL" />
+    <result column="coefficient_max" property="coefficientMax" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, adjustment_factor_id, factor_level, factor1, factor2, factor3, factor4, factor5, 
+    range_start, range_end, coefficient, coefficient_min, coefficient_max
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_adjustment_coefficient
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from t_adjustment_coefficient
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.zisezhixin.model.calculator.Coefficient" >
+    insert into t_adjustment_coefficient (id, adjustment_factor_id, factor_level, 
+      factor1, factor2, factor3, 
+      factor4, factor5, range_start, 
+      range_end, coefficient, coefficient_min, 
+      coefficient_max)
+    values (#{id,jdbcType=BIGINT}, #{adjustmentFactorId,jdbcType=BIGINT}, #{factorLevel,jdbcType=VARCHAR}, 
+      #{factor1,jdbcType=VARCHAR}, #{factor2,jdbcType=VARCHAR}, #{factor3,jdbcType=VARCHAR}, 
+      #{factor4,jdbcType=VARCHAR}, #{factor5,jdbcType=VARCHAR}, #{rangeStart,jdbcType=DECIMAL}, 
+      #{rangeEnd,jdbcType=DECIMAL}, #{coefficient,jdbcType=DECIMAL}, #{coefficientMin,jdbcType=DECIMAL}, 
+      #{coefficientMax,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zisezhixin.model.calculator.Coefficient" >
+    insert into t_adjustment_coefficient
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="adjustmentFactorId != null" >
+        adjustment_factor_id,
+      </if>
+      <if test="factorLevel != null" >
+        factor_level,
+      </if>
+      <if test="factor1 != null" >
+        factor1,
+      </if>
+      <if test="factor2 != null" >
+        factor2,
+      </if>
+      <if test="factor3 != null" >
+        factor3,
+      </if>
+      <if test="factor4 != null" >
+        factor4,
+      </if>
+      <if test="factor5 != null" >
+        factor5,
+      </if>
+      <if test="rangeStart != null" >
+        range_start,
+      </if>
+      <if test="rangeEnd != null" >
+        range_end,
+      </if>
+      <if test="coefficient != null" >
+        coefficient,
+      </if>
+      <if test="coefficientMin != null" >
+        coefficient_min,
+      </if>
+      <if test="coefficientMax != null" >
+        coefficient_max,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="adjustmentFactorId != null" >
+        #{adjustmentFactorId,jdbcType=BIGINT},
+      </if>
+      <if test="factorLevel != null" >
+        #{factorLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="factor1 != null" >
+        #{factor1,jdbcType=VARCHAR},
+      </if>
+      <if test="factor2 != null" >
+        #{factor2,jdbcType=VARCHAR},
+      </if>
+      <if test="factor3 != null" >
+        #{factor3,jdbcType=VARCHAR},
+      </if>
+      <if test="factor4 != null" >
+        #{factor4,jdbcType=VARCHAR},
+      </if>
+      <if test="factor5 != null" >
+        #{factor5,jdbcType=VARCHAR},
+      </if>
+      <if test="rangeStart != null" >
+        #{rangeStart,jdbcType=DECIMAL},
+      </if>
+      <if test="rangeEnd != null" >
+        #{rangeEnd,jdbcType=DECIMAL},
+      </if>
+      <if test="coefficient != null" >
+        #{coefficient,jdbcType=DECIMAL},
+      </if>
+      <if test="coefficientMin != null" >
+        #{coefficientMin,jdbcType=DECIMAL},
+      </if>
+      <if test="coefficientMax != null" >
+        #{coefficientMax,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zisezhixin.model.calculator.Coefficient" >
+    update t_adjustment_coefficient
+    <set >
+      <if test="adjustmentFactorId != null" >
+        adjustment_factor_id = #{adjustmentFactorId,jdbcType=BIGINT},
+      </if>
+      <if test="factorLevel != null" >
+        factor_level = #{factorLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="factor1 != null" >
+        factor1 = #{factor1,jdbcType=VARCHAR},
+      </if>
+      <if test="factor2 != null" >
+        factor2 = #{factor2,jdbcType=VARCHAR},
+      </if>
+      <if test="factor3 != null" >
+        factor3 = #{factor3,jdbcType=VARCHAR},
+      </if>
+      <if test="factor4 != null" >
+        factor4 = #{factor4,jdbcType=VARCHAR},
+      </if>
+      <if test="factor5 != null" >
+        factor5 = #{factor5,jdbcType=VARCHAR},
+      </if>
+      <if test="rangeStart != null" >
+        range_start = #{rangeStart,jdbcType=DECIMAL},
+      </if>
+      <if test="rangeEnd != null" >
+        range_end = #{rangeEnd,jdbcType=DECIMAL},
+      </if>
+      <if test="coefficient != null" >
+        coefficient = #{coefficient,jdbcType=DECIMAL},
+      </if>
+      <if test="coefficientMin != null" >
+        coefficient_min = #{coefficientMin,jdbcType=DECIMAL},
+      </if>
+      <if test="coefficientMax != null" >
+        coefficient_max = #{coefficientMax,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zisezhixin.model.calculator.Coefficient" >
+    update t_adjustment_coefficient
+    set adjustment_factor_id = #{adjustmentFactorId,jdbcType=BIGINT},
+      factor_level = #{factorLevel,jdbcType=VARCHAR},
+      factor1 = #{factor1,jdbcType=VARCHAR},
+      factor2 = #{factor2,jdbcType=VARCHAR},
+      factor3 = #{factor3,jdbcType=VARCHAR},
+      factor4 = #{factor4,jdbcType=VARCHAR},
+      factor5 = #{factor5,jdbcType=VARCHAR},
+      range_start = #{rangeStart,jdbcType=DECIMAL},
+      range_end = #{rangeEnd,jdbcType=DECIMAL},
+      coefficient = #{coefficient,jdbcType=DECIMAL},
+      coefficient_min = #{coefficientMin,jdbcType=DECIMAL},
+      coefficient_max = #{coefficientMax,jdbcType=DECIMAL}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
