@@ -55,9 +55,9 @@
 			enableDeleteByExample="false" /> -->
 		<!-- <table tableName="t_sys_dept" domainObjectName="Dept" enableCountByExample="false" 
 			enableSelectByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"/> -->
-		<table tableName="t_adjustment_coefficient" domainObjectName="Coefficient"
-			enableCountByExample="false" enableSelectByExample="false"
-			enableUpdateByExample="false" enableDeleteByExample="false" />
+		<table tableName="t_sys_user" domainObjectName="User"
+			enableCountByExample="true" enableSelectByExample="true"
+			enableUpdateByExample="true" enableDeleteByExample="true" />
 	</context>
 
 </generatorConfiguration>

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.zisezhixin.model.calculator.Factor;
+import com.zisezhixin.model.calculator.User;
 import com.zisezhixin.service.calculator.FactorService;
 
 @Controller
@@ -26,6 +27,10 @@ public class IndexController {
         
         List<Factor> factorList = factorService.getFactorList("229");
         request.setAttribute("factorList", factorList);
+        List<User> claimUserList = factorService.getClaimUserList("0");
+        List<User> saleUserList = factorService.getSaleUserList("0");
+        request.setAttribute("claimUserList", claimUserList);
+        request.setAttribute("saleUserList", saleUserList);
         return "index";
     }
 }

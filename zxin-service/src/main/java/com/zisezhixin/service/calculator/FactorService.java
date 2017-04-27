@@ -3,6 +3,7 @@ package com.zisezhixin.service.calculator;
 import java.util.List;
 
 import com.zisezhixin.model.calculator.Factor;
+import com.zisezhixin.model.calculator.User;
 
 public interface FactorService {
     /**
@@ -13,4 +14,8 @@ public interface FactorService {
      * @return
      */
     public List<Factor> getFactorList(String id);
+    
+    List<User> getClaimUserList(String id);
+    
+    List<User> getSaleUserList(String id);
 }
