@@ -22,5 +22,11 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- 数学表达式解析器 -->
+		<dependency>
+			<groupId>com.xk</groupId>
+			<artifactId>expression4j</artifactId>
+			<version>0.03</version>
+		</dependency>
 	</dependencies>
-	</project>
+</project>
