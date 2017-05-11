@@ -15,8 +15,23 @@
 	var editor;
 	KindEditor.ready(function(K) {
 		editor = K.create('textarea[name="content"]', {
-			allowFileManager : true
+			cssPath : 'js/kindeditor-4.1.10/plugins/code/prettify.css',
+			uploadJson : 'js/kindeditor-4.1.10/jsp/upload_json.jsp',
+			fileManagerJson : 'js/kindeditor-4.1.10/jsp/file_manager_json.jsp',
+			allowFileManager : true,
+			afterCreate : function() {
+				var self = this;
+				K.ctrl(document, 13, function() {
+					self.sync();
+					document.forms['example'].submit();
+				});
+				K.ctrl(self.edit.doc, 13, function() {
+					self.sync();
+					document.forms['example'].submit();
+				});
+			}
 		});
+		prettyPrint();
 		K('input[name=getHtml]').click(function(e) {
 			alert(editor.html());
 		});
